@@ -6,14 +6,15 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230327195937">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230407212038">
+	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header data-scroll="114" data-scroll-show class="header">
 			<div class="header__container">
 				<a href="#" class="header__logo"><img src="img/header/logo.svg" alt="GoCorona logo"></a>
 				<div class="header__menu menu">
@@ -48,10 +49,10 @@
 						</div>
 					</div>
 					<div class="main-page__footer footer-main">
-						<div class="footer-main__media">
-							<div class="footer-main__label">Stay safe with GoCorona</div>
-							<a href="#" class="footer-main__link">Watch Video</a>
-						</div>
+						<button type="button" class="footer-main__media" data-popup="#main-video" data-popup-youtube="ovBTYI8JRcY">
+							<span class="footer-main__label">Stay safe with GoCorona</span>
+							<span class="footer-main__link">Watch Video</span>
+						</button>
 					</div>
 				</div>
 			</section>
@@ -105,8 +106,9 @@
 						</div>
 						<div class="content-experts__media media-content">
 							<div class="media-content__block">
-								<a href="#" class="media-content__link"><img src="img/experts/doctor_&_nurse.svg" alt="Image of a doctor & nurse">
-								</a>
+								<button type="button" class="media-content__link" data-popup="#expert-video" data-popup-youtube="C7JhvSgcuy0">
+									<img src="img/experts/doctor_&_nurse.svg" alt="Image of a doctor & nurse">
+								</button>
 							</div>
 						</div>
 					</div>
@@ -191,7 +193,25 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230327195937"></script>
+	<div id="main-video" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div data-youtube-place class="popup__text">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="expert-video" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div data-youtube-place class="popup__text">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20230407212038"></script>
 </body>
 
 </html>
